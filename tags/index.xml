@@ -6,6 +6,15 @@
         <description>Recent content in Tags on Biu Biu&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Biu Biu Biu</copyright><atom:link href="https://biubiuww.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>Biu Biu Biu</copyright>
+        <lastBuildDate>Wed, 20 Mar 2024 11:05:32 +0800</lastBuildDate><atom:link href="https://biubiuww.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Django</title>
+        <link>https://biubiuww.github.io/tags/django/</link>
+        <pubDate>Wed, 20 Mar 2024 11:05:32 +0800</pubDate>
+        
+        <guid>https://biubiuww.github.io/tags/django/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

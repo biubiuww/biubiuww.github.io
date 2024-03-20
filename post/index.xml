@@ -7,6 +7,172 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Biu Biu Biu</copyright>
-        <lastBuildDate>Wed, 20 Mar 2024 11:05:32 +0800</lastBuildDate><atom:link href="https://biubiuww.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Wed, 20 Mar 2024 11:05:32 +0800</lastBuildDate><atom:link href="https://biubiuww.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>记录django中模型常见字段与参数</title>
+        <link>https://biubiuww.github.io/post/2024/03/1/</link>
+        <pubDate>Wed, 20 Mar 2024 11:05:32 +0800</pubDate>
+        
+        <guid>https://biubiuww.github.io/post/2024/03/1/</guid>
+        <description>&lt;img src="https://biubiuww.github.io/post/2024/pic/django-web-logo.png" alt="Featured image of post 记录django中模型常见字段与参数" /&gt;&lt;h2 id=&#34;前文&#34;&gt;前文&lt;/h2&gt;
+&lt;p&gt;最近在学习Django，其中通过使用 Python 类来定义模型，使得模型的定义非常简洁易用。&lt;/p&gt;
+&lt;p&gt;于是顺手整理了一下模型的不同字段适用于那些情况。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Django : 4.2.11&lt;/li&gt;
+&lt;li&gt;Python : 3.9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;django模型字段&#34;&gt;Django模型字段&lt;/h2&gt;
+&lt;p&gt;选择字段类型时，需要考虑以下因素（仅个人意见）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要存储的数据类型。&lt;/li&gt;
+&lt;li&gt;数据的大小和长度。&lt;/li&gt;
+&lt;li&gt;数据的格式和结构。&lt;/li&gt;
+&lt;li&gt;数据的用途和使用场景。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;字符串字段&#34;&gt;字符串字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;max_length:&lt;/strong&gt; 字符串的最大长度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;default:&lt;/strong&gt; 字段的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CharField：&lt;/strong&gt; 存储固定长度的字符串，例：姓名、地址、标题、简介等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;CharField(max_length=255, null=True, blank=True, default=&amp;quot;John Doe&amp;quot;, help_text=&amp;quot;The user&#39;s name.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TextField：&lt;/strong&gt; 存储可变长度的字符串，例：文章内容、评论、描述等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;TextField(null=True, blank=True, default=&amp;quot;This is a text field.&amp;quot;, help_text=&amp;quot;The user&#39;s biography.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;数字字段&#34;&gt;数字字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;max_digits:&lt;/strong&gt; 数字的最大位数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;decimal_places:&lt;/strong&gt; 小数点后的位数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;default:&lt;/strong&gt; 字段的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IntegerField：&lt;/strong&gt; 存储整数，例：年龄、数量、ID 等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;IntegerField(max_digits=10, decimal_places=2, null=True, blank=True, default=21, help_text=&amp;quot;The user&#39;s age.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FloatField：&lt;/strong&gt; 存储浮点数，例：价格、折扣、百分比等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;FloatField(max_digits=10, decimal_places=2, null=True, blank=True, default=3.14, help_text=&amp;quot;The user&#39;s height.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DecimalField：&lt;/strong&gt; 存储定点数，例：货币金额、利率、税率等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;DecimalField(max_digits=10, decimal_places=2, null=True, blank=True, default=100.00, help_text=&amp;quot;The user&#39;s salary.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;日期和时间字段&#34;&gt;日期和时间字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;auto_now:&lt;/strong&gt; 是否在每次保存模型时自动更新字段值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;auto_now_add:&lt;/strong&gt; 是否在创建模型时自动更新字段值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;DateField：&lt;/strong&gt; 存储日期，例：出生日期、入职日期、截止日期等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;DateField(auto_now=True, null=True, blank=True, help_text=&amp;quot;The user&#39;s birthday.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;TimeField：&lt;/strong&gt; 存储时间，例：上课时间、下班时间、营业时间等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;TimeField(auto_now=True, null=True, blank=True, help_text=&amp;quot;The user&#39;s work start time.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DateTimeField：&lt;/strong&gt; 存储日期和时间，例：活动时间、会议时间、发布时间等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;DateTimeField(auto_now=True, null=True, blank=True, help_text=&amp;quot;The user&#39;s last login time.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;布尔字段&#34;&gt;布尔字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;default:&lt;/strong&gt; 字段的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;BooleanField：&lt;/strong&gt; 存储布尔值，例如 True 或 False，例：是否启用、是否删除、是否同意等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;BooleanField(null=True, blank=True, default=False, help_text=&amp;quot;The user is active.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;外键字段&#34;&gt;外键字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;to:&lt;/strong&gt; 关联的模型类。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;on_delete:&lt;/strong&gt; 当关联的模型被删除时，对当前模型的操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;related_name:&lt;/strong&gt; 反向关联的名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ForeignKey：&lt;/strong&gt; 用于建立两个模型之间的关系，例：用户和订单、课程和学生、商品和类别等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;ForeignKey(to=User, on_delete=models.CASCADE, null=True, blank=True, related_name=&amp;quot;orders&amp;quot;, help_text=&amp;quot;The user&#39;s orders.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;多对多字段&#34;&gt;多对多字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;to:&lt;/strong&gt; 关联的模型类。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;through:&lt;/strong&gt; 中间表模型 (可选)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;related_name:&lt;/strong&gt; 反向关联的名称。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ManyToManyField：&lt;/strong&gt; 用于建立两个模型之间的多对多关系，例：学生和课程、老师和课程、角色和权限等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;ManyToManyField(to=Course, through=&amp;quot;CourseEnrollment&amp;quot;, related_name=&amp;quot;students&amp;quot;, help_text=&amp;quot;The courses the user is taking.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;文件字段&#34;&gt;文件字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;upload_to:&lt;/strong&gt; 上传文件的目录。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;max_length:&lt;/strong&gt; 文件的最大长度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;FileField：&lt;/strong&gt; 存储文件，例：头像、照片、附件等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;FileField(upload_to=&amp;quot;avatars/&amp;quot;, max_length=255, null=True, blank=True, help_text=&amp;quot;The user&#39;s avatar.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ImageField：&lt;/strong&gt; 存储图片文件，例：商品图片、风景图片、证件照等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;ImageField(upload_to=&amp;quot;images/&amp;quot;, max_length=255, null=True, blank=True, help_text=&amp;quot;The user&#39;s profile picture.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;枚举字段&#34;&gt;枚举字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;choices:&lt;/strong&gt; 可选值的列表。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;default:&lt;/strong&gt; 字段的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;ChoiceField：&lt;/strong&gt; 存储有限选项的值，例：性别、状态、类型、颜色等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;ChoiceField(choices=((&amp;quot;male&amp;quot;, &amp;quot;Male&amp;quot;), (&amp;quot;female&amp;quot;, &amp;quot;Female&amp;quot;)), null=True, blank=True, default=&amp;quot;male&amp;quot;, help_text=&amp;quot;The user&#39;s gender.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;json-字段&#34;&gt;JSON 字段&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;null:&lt;/strong&gt; 是否允许字段为空。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;blank:&lt;/strong&gt; 是否允许字段为空白字符串。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;default:&lt;/strong&gt; 字段的默认值。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;help_text:&lt;/strong&gt; 字段的帮助文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;JSONField：&lt;/strong&gt; 存储 JSON 格式的数据，例：用户设置、地址信息、产品参数等&lt;/p&gt;
+&lt;p&gt;示例：
+&lt;code&gt;JSONField(null=True, blank=True, default={&amp;quot;age&amp;quot;: 21, &amp;quot;gender&amp;quot;: &amp;quot;male&amp;quot;}, help_text=&amp;quot;The user&#39;s additional information.&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;p&gt;1、&lt;a class=&#34;link&#34; href=&#34;https://docs.djangoproject.com/zh-hans/4.2/ref/models/fields/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Django文档：模型字段参考&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>
