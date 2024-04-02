@@ -7,6 +7,80 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Biu Biu Biu</copyright><atom:link href="https://biubiuww.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vultr免费套餐计划</title>
+        <link>https://biubiuww.github.io/post/2024/04/1/</link>
+        <pubDate>Tue, 02 Apr 2024 14:23:03 +0800</pubDate>
+        
+        <guid>https://biubiuww.github.io/post/2024/04/1/</guid>
+        <description>&lt;img src="https://biubiuww.github.io/post/2024/pic/vultr_free.png" alt="Featured image of post Vultr免费套餐计划" /&gt;&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
+&lt;p&gt;Vultr作为一家领先的云计算服务提供商，在之前开启了免费计划&amp;hellip;（也是很久没有登上去看过，最近才发现）&lt;/p&gt;
+&lt;p&gt;应该有一部分是用他家的VPS开始的漫漫怕坑路吧&amp;hellip;hahaha&lt;/p&gt;
+&lt;h3 id=&#34;免费计划内容&#34;&gt;免费计划内容&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;硬件指标：1vCPU / 512MB RAM / 10GB SSD / IPv4 地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可用地区：迈阿密、西雅图、法兰克福&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;申请地址&#34;&gt;申请地址&lt;/h3&gt;
+&lt;p&gt;1、在申请这个之前，你至少需要一个Vultr账号，账号注册就不做过多赘述。一般来说鹅厂的邮箱会大大的降低收到邮件的概率&amp;hellip;&lt;/p&gt;
+&lt;p&gt;2、 注册地址可以 &lt;a class=&#34;link&#34; href=&#34;https://www.vultr.com/?ref=7298452&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;点我是传送门&lt;/strong&gt;&lt;/a&gt; PS：踩我的这个连接过去，还能得到 &lt;strong&gt;$100&lt;/strong&gt; 的券，这个券开VPS可以自动抵扣，哪怕最后没有申请到免费计划，咱也不亏。白给100刀，不拿有点亏得慌&amp;hellip;&lt;/p&gt;
+&lt;p&gt;3、 如果你已经有了账号，可以&lt;a class=&#34;link&#34; href=&#34;https://my.vultr.com/settings/#settingsfreetier&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;点我是传送门&lt;/strong&gt;&lt;/a&gt;，进入申请页面，填写申请，然后静静等待通知就可以。&lt;/p&gt;
+&lt;h3 id=&#34;创建实例&#34;&gt;创建实例&lt;/h3&gt;
+&lt;p&gt;实例的创建可以在后台的&amp;quot;Products&amp;quot; - &amp;ldquo;Compute&amp;rdquo; - &amp;ldquo;Deploy Server&amp;rdquo; 中开始实例创建的配置选择页面。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://biubiuww.github.io/post/2024/pic/vultr_create_1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vultr create&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果你是免费计划，那么当你切换到 &amp;ldquo;Cloud Compute - Shared CPU&amp;rdquo; 选项中，然后在&amp;quot;Choose Plan&amp;quot;中找到对应地区就可以看到免费实例的标签了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://biubiuww.github.io/post/2024/pic/vultr_create_2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vultr create&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://biubiuww.github.io/post/2024/pic/vultr_create_3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vultr create&#34;
+	
+	
+&gt;
+如果你还没有通过免费计划，但是你是踩我连接新注册的呢，那就根据自己的需求去选择合适的配置及地区就可以啦。&lt;/p&gt;
+&lt;h3 id=&#34;注意事项&#34;&gt;注意事项&lt;/h3&gt;
+&lt;p&gt;1、免费计划目前通过后只有&lt;strong&gt;1年&lt;/strong&gt; 时间，如果过期了，要记得及时取消自己的实例&lt;/p&gt;
+&lt;p&gt;2、目前Vultr支持常见的支付方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;信用卡&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支付宝&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PayPal&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>记录django中模型常见字段与参数</title>
         <link>https://biubiuww.github.io/post/2024/03/1/</link>
         <pubDate>Wed, 20 Mar 2024 11:05:32 +0800</pubDate>

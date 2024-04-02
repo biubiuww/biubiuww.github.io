@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>信息分享 on Biu Biu&#39;s Blog</title>
-        <link>https://biubiuww.github.io/categories/share/</link>
-        <description>Recent content in 信息分享 on Biu Biu&#39;s Blog</description>
+        <title>Vps on Biu Biu&#39;s Blog</title>
+        <link>https://biubiuww.github.io/tags/vps/</link>
+        <description>Recent content in Vps on Biu Biu&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>Biu Biu Biu</copyright><atom:link href="https://biubiuww.github.io/categories/share/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>Biu Biu Biu</copyright>
+        <lastBuildDate>Tue, 02 Apr 2024 14:23:03 +0800</lastBuildDate><atom:link href="https://biubiuww.github.io/tags/vps/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Vultr免费套餐计划</title>
         <link>https://biubiuww.github.io/post/2024/04/1/</link>
         <pubDate>Tue, 02 Apr 2024 14:23:03 +0800</pubDate>
